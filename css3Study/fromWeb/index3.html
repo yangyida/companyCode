@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -384px;
+            margin-top: -65px;
+        }
+        .list>li{
+            float: left;
+            position: relative;
+        }
+        .list>li>a{
+            display: block;
+            width: 68px;
+            height: 70px;
+            margin: 30px;
+            background: url(img/growcase_the_social_gunman_icons.png);
+            background-position-y: 0px;
+        }
+        .list>li:nth-child(1)>a{
+            background-position-x: 0px;
+        }
+        .list>li:nth-child(2)>a{
+            background-position-x: 68px;
+        }
+        .list>li:nth-child(3)>a{
+            background-position-x: 136px;
+        }
+        .list>li:nth-child(4)>a{
+            background-position-x: 204px;
+        }
+        .list>li:nth-child(5)>a{
+            background-position-x: 272px;
+        }
+        .list>li:nth-child(6)>a{
+            background-position-x: 340px;
+        }
+
+        li:hover>.tip{
+            top: 0;
+            opacity: 1;
+            left: 50%;
+            transform: none;
+        }
+
+        .tip{
+            width: 88px;
+            position: absolute;
+            top: 44px;
+            opacity: 0;
+            left:70%;
+            transform: scale(2) rotate(90deg);
+            margin-left: -44px;
+            border-radius: 4px;
+            box-shadow:4px 4px 12px #cccccc;
+            transition: all .2s linear;
+        }
+        .tip>p{
+            line-height: 24px;
+            text-align: center;
+            padding:0 12px;
+        }
+        .tip:after{
+            position: absolute;
+            left: 50%;
+            margin-left: -4px;
+            top: 100%;
+            margin-top: -4px;
+            content: "";
+            width:8px;
+            height: 8px;
+            background-color: white;
+            border:1px solid #ccc;
+            border-width: 0 1px 1px 0;
+            box-shadow: 4px 4px 12px #cccccc;
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul class="list clear">
+        <li>
+            <a href="#"></a>
+            <div class="tip">
+                <p>item1</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="tip">
+                <p>item2</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="tip">
+                <p>item3</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="tip">
+                <p>item4</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="tip">
+                <p>item5</p>
+            </div>
+        </li>
+        <li>
+            <a href="#"></a>
+            <div class="tip">
+                <p>item6</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

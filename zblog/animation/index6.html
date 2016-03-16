@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <script src="../lib/jquery-1.11.3.js"></script>
+        <script src="index6.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            img,canvas{
+                vertical-align: middle;
+            }
+
+            #c{
+                border: 1px solid #cccccc;
+            }
+
+            #c:active{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="file" id="f"/>
+        <canvas id="c" width="300" height="300"></canvas>
+        <button id="save">保存</button>
+        <a id="down" download="111.png">下载</a>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.clear:after{
+    display: block;
+    content: ".";
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+}
+
+img,canvas{
+    vertical-align: middle;
+}

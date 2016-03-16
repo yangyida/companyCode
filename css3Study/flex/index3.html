@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .box{
+                display: flex;
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+            }
+            .box>span{
+                background-color: #009999;
+                border-radius: 10px;
+                height: 6px;
+            }
+            .box>:nth-child(1){
+                flex: 1 0 0;
+            }
+            .box>:nth-child(2){
+                flex: 1 0 0;
+            }
+            .box>:nth-child(3){
+                flex: 0 0 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>

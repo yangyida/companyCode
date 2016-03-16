@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+                border: 0px;
+                outline: 0px;
+            }
+
+            .btn{
+                padding: 0 12px;
+                line-height: 24px;
+                color: white;
+                background-color: #00af5c;
+                cursor: pointer;
+            }
+
+            .btn:hover{
+                background-color: #219161;
+            }
+
+            .btn:active{
+               transition: box-shadow .2s linear;
+               box-shadow: inset 2px 2px 12px #999999;
+               background-color: #219161;
+            }
+
+            #box{
+                transition: height .4s linear;
+                width: 200px;
+                height: 200px;
+                background-color: #0000FF;
+            }
+
+            #box:hover{
+                transition:none;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+         <button class="btn">按钮</button>
+         <div id="box"></div>
+    </body>
+</html>

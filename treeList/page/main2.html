@@ -1,0 +1,137 @@
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<link href="../style/main.css" rel="stylesheet" type="text/css">
+
+<div class="treeListMain">
+
+    <ul class="bg-ul">
+        <li class="li-bg-top-open">
+            <a class="showList"></a>
+            <p>
+                <span class="bg-folder">Folder 1</span>
+            </p>
+            <ul>
+                <li class="li-bg-bottom-general">
+                    <p>
+                        <span class="bg-file">File 1.1</span>
+                    </p>
+                </li>
+            </ul>
+        </li>
+        <li class="li-bg-top-open">
+            <a class="showList"></a>
+            <p>
+                <span class="bg-folder">Folder 2</span>
+            </p>
+            <ul>
+                <li class="li-bg-top-open">
+                    <a class="showList"></a>
+                    <p>
+                        <span class="bg-folder">Subfolder 2.1</span>
+                    </p>
+                    <ul>
+                        <li class="li-bg-top-general">
+                            <p>
+                                <span class="bg-file">File 2.1.1</span>
+                            </p>
+                        </li>
+                        <li class="li-bg-bottom-general">
+                            <p>
+                                <span class="bg-file">File 2.1.2</span>
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="li-bg-bottom-general">
+                    <p>
+                        <span class="bg-file">File 2.2</span>
+                    </p>
+                </li>
+            </ul>
+        </li>
+        <li class="li-bg-bottom-general">
+            <p>
+                <span class="bg-file">File 4</span>
+            </p>
+        </li>
+    </ul>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+    /*var list = {
+     "Folder 1" : {
+     isFile : false,
+     list : {
+     "Item 1.1" : {
+     isFile : true
+     }
+     }
+     },
+     "Folder 2" : {
+     isFile : false,
+     list : {
+     "Subfolder 2.1" : {
+     isFile : false,
+     list : {
+     "File 2.1.1" : {
+     isFile : true
+     },
+     "File 2.1.2" : {
+     isFile : true
+     }
+     }
+     }
+     }
+     },
+     "File 4" : {
+     isFile : true
+     }
+     };*/
+
+    var list2 = [
+        {
+            name : "Folder 1",
+            canList : true,
+            list : [
+                {
+                    name : "File 1.1",
+                    canList : false
+                }
+            ]
+        },
+
+        {
+            name : "Folder 2",
+            canList : true,
+            list : [
+                {
+                    name : "Subfolder 2.1",
+                    canList : true,
+                    list : [
+                        {
+                            name : "File 2.1.1",
+                            canList : false
+                        },
+                        {
+                            name : "File 2.1.2",
+                            canList : false
+                        }
+                    ]
+                },
+                {
+                    name : "File 2.2",
+                    canList : false
+                }
+            ]
+        },
+
+        {
+            name : "File 4",
+            canList : false
+        }
+    ];
+
+</script>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .clear:after{
+                display: block;
+                content: ".";
+                height: 0px;
+                visibility: hidden;
+                clear:both;
+            }
+            div{
+                float: left;
+                width: 200px;
+                height: 150px;
+                margin: 10px;
+            }
+            body>:nth-child(1){
+                background-image: radial-gradient(orange, red);
+            }
+            body>:nth-child(2){
+                background-image: radial-gradient(circle, orange, red);
+            }
+            body>:nth-child(3){
+                background-image: radial-gradient(ellipse, orange, red);
+            }
+            body>:nth-child(4){
+                background-image: radial-gradient(200px 20px at 50px 75px, orange, red);
+            }
+            body>:nth-child(5){
+                background-image: radial-gradient(20px 100px at 50px 75px, orange, red);
+            }
+            body>:nth-child(6){
+                background-image: radial-gradient(50% 50% at 50% 50%, orange, red);
+            }
+            body>:nth-child(7){
+                background-image: radial-gradient(circle at center, orange, red);
+            }
+            body>:nth-child(8){
+                background-image: radial-gradient(ellipse at center, orange, red);
+            }
+            body>:nth-child(9){
+                background-image: radial-gradient(circle at top right, orange, red);
+            }
+            body>:nth-child(10){
+                background-image: radial-gradient(20px 30px ellipse at top, orange, red);
+            }
+            body>:nth-child(11){
+                background-image: radial-gradient(farthest-corner ellipse at 20% 50%, orange, red);
+            }
+            body>:nth-child(12){
+                background-image: radial-gradient(circle at center, red 20%, green 50%, blue 80%);
+            }
+            body>:nth-child(13){
+                background-image: repeating-linear-gradient(to top right, red 0%, red 5%, green 6%, green 10%);
+            }
+            body>:nth-child(14){
+                background-image: repeating-radial-gradient(circle at center, red, green 20%);
+            }
+        </style>
+    </head>
+    <body class="clear">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+    </body>
+</html>

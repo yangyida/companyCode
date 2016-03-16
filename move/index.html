@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <script src="util/elasticMove.js"></script>
+        <script src="util/speedUpMove.js"></script>
+        <script src="util/speedDownMove.js"></script>
+        <script src="util/impactMove.js"></script>
+        <script src="util/freeFallMove.js"></script>
+        <script src="index.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .clear:after{
+                display: block;
+                content: ".";
+                height: 0px;
+                visibility: hidden;
+                clear: both;
+            }
+
+            img{
+                vertical-align: middle;
+            }
+
+            li{
+                list-style: none;
+            }
+
+            #containt{
+                position: relative;
+                width: 240px;
+                height: 360px;
+                overflow: hidden;
+            }
+
+            #containt>ul{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 960px;
+            }
+
+            #containt>ul>li{
+                float: left;
+                width: 240px;
+                height: 360px;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="containt">
+            <ul id="show" class="clear">
+                <li>
+                    <img src="images/pic1.png"/>
+                </li>
+                <li>
+                    <img src="images/pic2.png"/>
+                </li>
+                <li>
+                    <img src="images/pic3.png"/>
+                </li>
+                <li>
+                    <img src="images/pic4.png"/>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            p{
+                background-color: #7D9029;
+                height: 0px;
+                overflow: hidden;
+            }
+
+            :target{
+                transition: height 0.6s linear;
+                height: 20px;
+            }
+
+            #box>div{
+                margin: 8px;
+            }
+
+            #box>div>h2{
+                border:1px solid #0050c0;
+                border-radius: 2px;
+            }
+
+            #box>div>p{
+                transition: height .2s linear;
+                height: 0px;
+                overflow: hidden;
+                background-color: #009999;
+            }
+
+            #box :target{
+                transition: height .2s linear;
+                height: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="#p1">点击</a>
+        <a href="#p2">点击</a>
+        <a href="javascript:void(0);">点击</a>
+        <p id="p1">0987654321</p>
+        <p id="p2">1234567890</p>
+        <div id="box">
+            <div>
+                <h2>
+                    <a href="#text1">标题一</a>
+                </h2>
+                <p id="text1">标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一</p>
+            </div>
+            <div>
+                <h2>
+                    <a href="#text2">标题二</a>
+                </h2>
+                <p id="text2">标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二</p>
+            </div>
+            <div>
+                <h2>
+                    <a href="#text3">标题三</a>
+                </h2>
+                <p id="text3">标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三</p>
+            </div>
+        </div>
+    </body>
+</html>

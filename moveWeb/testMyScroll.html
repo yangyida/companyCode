@@ -1,0 +1,58 @@
+<!-- 默认大小640px -->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <script src="util/myscroll.js"></script>
+        <script type="text/javascript">
+            //计算自适应fontSize
+            (function(){
+                var docEl = document.documentElement;
+                docEl.style.fontSize = docEl.clientWidth / 6.4 + "px";
+            })();
+        </script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            ul{
+                list-style: none;
+            }
+            #wrapper{
+                height: 3rem;
+                width: 100%;
+                overflow:hidden;
+                background-color: rgb(43,43,43);
+            }
+            #wrapper>ul{
+
+            }
+            #wrapper>ul>li{
+                box-sizing: border-box;
+                line-height: .4rem;
+                height: .4rem;
+                font-size: .3rem;
+                background-color: wheat;
+                border-bottom: .02rem solid #cccccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <ul>
+                <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li>
+                <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li>
+                <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li>
+                <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li>
+                <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li>
+                <li>A</li><li>B</li><li>C</li><li>D</li><li>E</li><li>F</li><li>G</li><li>H</li><li>I</li>
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            var myScroll = new MyScroll("#wrapper");
+        </script>
+    </body>
+</html>

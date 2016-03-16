@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.scrollChange-clear:after{
+    display: block;
+    content: ".";
+    height: 0px;
+    overflow: hidden;
+    clear: both;
+}
+
+.scrollChange-box{
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrollChange-animation-on{
+    transition: transform .2s ease-in;
+}

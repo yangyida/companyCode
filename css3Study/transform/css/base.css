@@ -1,0 +1,17 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clear:after{
+    display: block;
+    content: ".";
+    visibility: hidden;
+    height: 0px;
+    clear: both;
+}
+
+img,canvas{
+    vertical-align: middle;
+}

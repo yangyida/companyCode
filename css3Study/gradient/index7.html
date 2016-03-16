@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .bar{
+                margin: 20px;
+                position: relative;
+                width: 80px;
+                height: 230px;
+                background-color: rgb(43,43,43);
+                border-radius: 6px;
+            }
+            .progress{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: inherit;
+                background-image: linear-gradient(to bottom, #00A000, #009999);
+                border-radius: inherit;
+                overflow: hidden;
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+
+            window.onload = function(){
+
+                var oProgress = document.querySelector(".progress");
+
+                var currentPercent = 0;
+
+                var timer = setInterval(function(){
+
+                    if(currentPercent > 80){
+                        currentPercent += 1;
+                    }else{
+                        currentPercent += 4;
+                    }
+
+                    if(currentPercent > 100){
+                        currentPercent = 100;
+                        clearInterval(timer);
+                    }
+
+                    var complete = currentPercent + "%";
+
+                    oProgress.style.height  = complete;
+                    oProgress.innerHTML = complete;
+
+                    console.log(complete);
+
+                }, 120);
+            };
+
+        </script>
+    </head>
+    <body>
+        <div class="bar">
+            <div class="progress"></div>
+        </div>
+    </body>
+</html>

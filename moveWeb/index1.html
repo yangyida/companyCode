@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <script type="text/javascript">
+        window.onload = function(){
+
+            var tip = (function(){
+
+                var oTip = document.getElementById("tip");
+
+                return {
+                    show : function(str){
+                        oTip.innerHTML = str;
+                    }
+                }
+
+            })();
+
+            var o = document.getElementById("box");
+            var s = document.getElementById("son");
+
+            document.body.ontouchend = function(){
+                tip.show("body");
+            }
+
+            o.ontap = function(e){
+                e.stopPropagation();
+                tip.show("box");
+            }
+
+//            o.ongesturechange = function(){
+//                tip.show("change");
+//            }
+        }
+    </script>
+    <body>
+        <div id="box">
+            <div id="son" style="height: 300px; background-color: #0000FF;">
+            </div>
+        </div>
+        <div id="tip" style="position: fixed; bottom: 0px; left: 0px; font-size: 3.2rem;"></div>
+    </body>
+</html>

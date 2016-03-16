@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <script src="index.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #box{
+                width: 100px;
+                height: 100px;
+                background: url(images/web_heart_animation.png) 0px 0px no-repeat;
+                overflow: hidden;
+                animation: run infinite 1000ms steps(28, end);
+            }
+
+            .stop{
+                animation-play-state: paused !important;
+            }
+
+            @keyframes run{
+
+                0%{
+                    background-position: 0px 0px;
+                }
+
+                100%{
+                    background-position: -2800px 0px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <button id="btn">暂停</button>
+    </body>
+</html>

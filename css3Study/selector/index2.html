@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            .containt:hover{
+                cursor: pointer;
+            }
+            .containt:before{
+                content: "";
+                display: inline-block;
+                width: 0px;
+                height: 0px;
+                border-width: 0px 12px 12px 12px;
+                border-style: solid;
+                border-color: transparent transparent black transparent;
+            }
+            .containt:hover:before{
+                transition: transform .4s;
+                transform: rotate(180deg);
+            }
+
+            .btn:active{
+                transition: color .4s;
+                color: red;
+            }
+        </style>
+    </head>
+    <div class="containt">
+        <span>标题栏</span>
+        <button class="btn">按钮</button>
+    </div>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=3200,user-scalable=no">
+    <script type="text/javascript">
+
+        /**
+         * 用于不支持固定width的设备，若设备宽度大于width则会出现显示问题
+         */
+        (function(deviceWidth){
+
+            var setScale = function(){
+
+                var win = window,
+                        doc = document,
+                        docEl = doc.documentElement;
+
+                if(docEl.clientWidth != deviceWidth){
+
+                    var oldViewport = doc.querySelector("head>meta[name='viewport']");
+                    if(oldViewport){
+                        doc.head.removeChild(oldViewport);
+                    }
+
+                    var newViewport = document.createElement("meta");
+                    newViewport.name = "viewport";
+
+                    switch(window.orientation){
+                        case 0:
+                        case 180:
+                            var scale = 1.0;
+                            if(screen.width < screen.height){
+                                scale = screen.width / deviceWidth;
+                            }else{
+                                scale = screen.height / deviceWidth;
+                            }
+                            newViewport.content = "width=device-width,user-scalable=no,initial-scale=" + scale;
+                            break;
+                        case -90:
+                        case 90:
+                            var scale = 1.0;
+                            if(screen.height > screen.width){
+                                scale = screen.height / deviceWidth;
+                            }else{
+                                scale = screen.width / deviceWidth;
+                            }
+                            newViewport.content = "width=device-width,user-scalable=no,initial-scale=" + scale;
+                            break;
+                    }
+
+                    doc.head.appendChild(newViewport);
+                }
+
+
+            }
+
+            window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", setScale, false);
+
+            setScale();
+
+        })(3200);
+
+    </script>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 3000px; height: 120px; background-color: blue;"></div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.treeListMain,.treeListMain *{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    font-size: 14px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.treeListMain ul{
+    padding-left: 16px;
+}
+
+.treeListMain li{
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.treeListMain span{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    padding-left: 18px;
+}
+
+.treeListMain p{
+    cursor: pointer;
+    height: 20px;
+}
+
+.treeListMain p>input{
+    vertical-align: middle;
+}
+
+.treeListMain .showList{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/*文档背景图标*/
+.treeListMain .bg-folder{
+    background: url("../img/folder.gif") 0px 2px no-repeat;
+}
+
+.treeListMain .bg-folder-closed{
+    background: url("../img/folder-closed.gif") 0px 2px no-repeat;
+}
+/*end 文档背景图标*/
+
+/*文件背景图标*/
+.treeListMain .bg-file{
+    background: url("../img/file.gif") 0px 2px no-repeat;
+}
+/*end 文件背景图标*/
+
+/*加减背景*/
+.treeListMain .li-bg-bottom-close{
+    background: url("../img/bottom-close.gif") no-repeat;
+}
+
+.treeListMain .li-bg-bottom-general{
+    background: url("../img/bottom-general.gif") no-repeat;
+}
+
+.treeListMain .li-bg-bottom-open{
+    background: url("../img/bottom-open.gif") no-repeat;
+}
+
+.treeListMain .li-bg-top-close{
+    background: url("../img/top-close.gif") no-repeat;
+}
+
+.treeListMain .li-bg-top-general{
+    background: url("../img/top-general.gif") no-repeat;
+}
+
+.treeListMain .li-bg-top-open{
+    background: url("../img/top-open.gif") no-repeat;
+}
+

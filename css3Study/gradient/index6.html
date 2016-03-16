@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .bar{
+                width: 200px;
+                height: 20px;
+                background-color: #dedede;
+                border-radius: 10px;
+            }
+            .progress{
+                border-radius: 10px;
+                height: 100%;
+                background-image: repeating-linear-gradient(to bottom right, #aaaaaa 0, #aaaaaa 2px, #777777 3px, #777777 4px);
+            }
+        </style>
+        <script type="text/javascript">
+
+            window.onload = function(){
+
+                var oProgress = document.querySelector(".progress");
+
+                var currentProgress = 0;
+
+                var timer = setInterval(function(){
+
+                    if(currentProgress > 100){
+                        currentProgress = 100;
+                        clearInterval(timer);
+                    }
+
+                    oProgress.style.width = currentProgress + "%";
+
+                    currentProgress += 12;
+
+                    console.log(currentProgress);
+
+                }, 1200);
+
+            };
+
+        </script>
+    </head>
+    <body>
+        <div class="bar">
+            <div class="progress"></div>
+        </div>
+    </body>
+</html>

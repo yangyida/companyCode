@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            .containt{
+                position: relative;
+            }
+            .containt:after{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                content: "";
+            }
+            .containt:before{
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                content: "";
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box" class="containt c"></div>
+    </body>
+</html>

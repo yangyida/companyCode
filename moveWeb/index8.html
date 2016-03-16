@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <script src="util/log.js"></script>
+        <script type="text/javascript">
+            //计算自适应的fontSize
+            (function(win, doc, targetWidth){
+                var docEl = doc.documentElement;
+                docEl.style.fontSize = docEl.clientWidth / targetWidth + "px";
+            })(window, document, 6.4);
+        </script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            html,body{
+                height: 100%;
+            }
+            ul{
+                height: 100%;
+                list-style: none;
+                overflow-y: auto;
+            }
+            li{
+                font-size: .8rem;
+                height: 1.2rem;
+                line-height: 1.2rem;
+                border-bottom: 0.02rem solid #ccc;
+            }
+            header{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(43,43,43);
+                left: 0;
+                top: -100%;
+            }
+            article{
+                position: relative;
+                height: 100%;
+            }
+            section{
+                height: 100%;
+                overflow-y: hidden;
+            }
+        </style>
+    </head>
+    <body>
+
+        <section>
+            <article>
+                <header>
+
+                </header>
+                <ul>
+                    <li>01</li><li>02</li><li>03</li><li>04</li><li>05</li>
+                    <li>11</li><li>12</li><li>13</li><li>14</li><li>15</li>
+                    <li>21</li><li>22</li><li>23</li><li>24</li><li>25</li>
+                    <li>31</li><li>32</li><li>33</li><li>34</li><li>35</li>
+                </ul>
+            </article>
+        </section>
+
+    <script type="text/javascript">
+
+        document.addEventListener("DOMContentLoaded", function(){
+
+            var articleEl = document.querySelector("article");
+            articleEl.y = 0;
+            var showHeight = 0.6;
+
+
+            var ulEl = document.querySelector("ul");
+
+            var oldClientY = 0;
+
+            ulEl.addEventListener("touchstart", function(e){
+
+                oldClientY = e.changedTouches[0].clientY;
+
+            }, false);
+
+            ulEl.addEventListener("touchmove", function(e){
+                e.preventDefault();
+
+                var currentClientY = e.changedTouches[0].clientY;
+                var movedistance = oldClientY - currentClientY;
+                oldClientY = currentClientY;
+                a = this;
+                console.log(this);
+                if(this.scrollTop == 0 && movedistance < 0){
+                    //拖出下拉框
+                    articleEl.y -= movedistance / 100 * 0.4;
+                    setArticleEl(articleEl.y);
+                    if(articleEl.y >= showHeight){
+                        console.log("触发拉动事件");
+                    }
+                }
+                else{
+                    //list进行滚动
+                    if(articleEl.y == 0){
+                        this.scrollTop += movedistance;
+                    }else{
+                        articleEl.y -= movedistance / 100;
+                        if(articleEl.y < 0.1){
+                            articleEl.y = 0;
+                        }
+                        setArticleEl(articleEl.y);
+                    }
+
+                }
+
+
+            }, false);
+
+            ulEl.addEventListener("touchend", function(){
+
+                oldClientY = 0;
+
+                if(articleEl.y && articleEl.y < showHeight){
+                    articleEl.y = 0;
+                    setArticleEl(articleEl.y);
+
+                }else if(articleEl.y && articleEl.y >= showHeight){
+                    articleEl.y = showHeight;
+                    setArticleEl(articleEl.y);
+                    console.log("触发放手事件");
+                }
+
+
+            }, false);
+
+            function setArticleEl(y){
+                articleEl.style.webkitTransform = "translate3d(0," + y + "rem,0)";
+                articleEl.style.transform = "translate3d(0," + y + "rem,0)";
+            }
+
+        }, false);
+
+
+    </script>
+    </body>
+</html>

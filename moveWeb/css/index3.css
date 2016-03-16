@@ -1,0 +1,10 @@
+@charset "UTF-8";
+div{
+    height: 200px;
+    background-color: red;
+}
+
+.night div{
+    height: 200px;
+    background-color: black;
+}

@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+.console-clear,.console-clear *{
+    margin: 0px;
+    padding: 0px;
+}
+
+.console-clear:after{
+    display: block;
+    content: ".";
+    height: 0px;
+    visibility: hidden;
+    clear: both;
+}
+
+.console-containt{
+    position: fixed;
+    z-index: 9000;
+    left: 300px;
+    top: 20px;
+    border: 4px solid rgb(218,218,218);
+    border-radius: 4px;
+}
+
+.console-head{
+    width: 100%;
+    height: 20px;
+    color: red;
+    background-color: #0000FF;
+}
+
+.console-hide{
+    float: right;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: #514721;
+}
+
+.console-log-filter{
+    float: right;
+}
+
+.console-clear-main{
+    float: left;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.console-head:active{
+    cursor: move;
+}
+
+.console-body{
+}
+
+.console-main{
+    width: 400px;
+    height: 200px;
+    overflow: scroll;
+}
+
+.console-right-line{
+    position: absolute;
+    right: -4px;
+    top: 0px;
+    width: 4px;
+    height: 100%;
+    background-color: transparent;
+    cursor: e-resize;
+}
+
+.console-bottom-line{
+    position: absolute;
+    bottom: -4px;
+    width: 100%;
+    height: 4px;
+    background-color: transparent;
+    cursor: n-resize;
+}
+
+.console-minimize{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    background-color: green;
+    z-index: 9000;
+}

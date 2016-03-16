@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+
+            .bg{
+                width: 500px;
+                height: 100px;
+                margin: 12px;
+                background-color: #0040D0;
+            }
+
+            #box div{
+                min-height: 20px;
+                margin: 12px;
+                border:1px solid black;
+            }
+
+            #box :only-child{
+                border-color: red;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            var a = document.querySelectorAll("#box>:nth-child(odd)");
+            var b = document.querySelectorAll("#box>:nth-last-child(odd)");
+
+            if(a.length == b.length){
+                for(var i = 0; i < a.length; i++){
+                    console.log(a[i] === b[i]);
+                }
+            }
+
+
+
+        </script>
+    </body>
+</html>

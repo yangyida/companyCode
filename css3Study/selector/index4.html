@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            a{
+                text-decoration: none;
+            }
+
+            a:active,a:visited,a:link{
+                color: #514721;
+            }
+
+            #test>div{
+                position: relative;
+                margin: 12px;
+                width: 300px;
+                background-color: #7D9029;
+                border-radius: 8px;
+            }
+
+            #test>div>h2{
+                position: relative;
+            }
+
+            #test>div>h2:after{
+                position: absolute;
+                content:"";
+                top: 50%;
+                right: 0px;
+                margin-top: -6px;
+                margin-right: 12px;
+                border-style: solid;
+                border-width: 0px 12px 12px 12px;
+                border-color: black transparent;
+            }
+
+            #test :target h2:after{
+                transition: transform .3s linear;
+                transform: rotate(180deg);
+            }
+
+            #test a{
+                display: block;
+                padding: 8px;
+            }
+
+            #test p{
+                transition: height .4s linear;
+                height: 0px;
+                overflow: hidden;
+            }
+
+            #test :target p{
+                transition: height .4s linear;
+                height: 90px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="test">
+            <div id="text1">
+                <h2>
+                    <a href="#text1">标题一</a>
+                </h2>
+                <p>标题一标题一标题一标题一标题一<br/>标题一标题一标题一标题一标题一<br/>标题一标题一标题一标题一标题一<br/></p>
+            </div>
+            <div id="text2">
+                <h2>
+                    <a href="#text2">标题二</a>
+                </h2>
+                <p>
+                    标题二标题二标题二标题二标题二<br/>
+                    标题二标题二标题二标题二标题二<br/>
+                    标题二标题二标题二标题二标题二<br/>
+                </p>
+            </div>
+            <div id="text3">
+                <h2>
+                    <a href="#text3">标题三</a>
+                </h2>
+                <p>
+                    标题三标题三标题三标题三标题三标题三<br/>
+                    标题三标题三标题三标题三标题三标题三<br/>
+                    标题三标题三标题三标题三标题三标题三<br/>
+                    标题三标题三标题三标题三标题三标题三<br/>
+                    标题三标题三标题三标题三标题三标题三<br/>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

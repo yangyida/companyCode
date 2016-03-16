@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+        <script src="util/iscroll-probe.js"></script>
+        <script src="util/log.js"></script>
+        <script type="text/javascript">
+
+            (function(win, doc){
+
+                var docEl = doc.documentElement;
+                docEl.style.fontSize = docEl.clientWidth / 6.4 + "px";
+
+            })(window, document);
+
+
+        </script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            html{
+                height: 100%;
+            }
+            body{
+                height: 100%;
+            }
+            #wrapper{
+                position: relative;
+                height: 100%;
+                overflow: hidden;
+                background-color: rgb(43,43,43);
+            }
+            ul{
+                position: relative;
+                list-style-type: none;
+            }
+            li{
+                background-color: white;
+                box-sizing: border-box;
+                font-size: 0.4rem;
+                border-bottom: 0.02rem solid #ccc;
+            }
+            #topRefleshBox{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: -100%;
+                background-color: rgb(60,63,65);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <ul>
+                <div id="topRefleshBox">
+                    <div id="topReflesh" style="position: absolute; left:0; bottom:0; width: 100%; height: .6rem; line-height: .6rem; font-size: 0.2rem; text-align:center;">
+                        <span>↓</span>下拉刷新
+                    </div>
+                </div>
+                <li id="btn"><a href="http://www.baidu.com/" target="_blank">百度</a></li><li>02</li><li>03</li><li>04</li><li>05</li>
+                <li>11</li><li>12</li><li>13</li><li>14</li><li>15</li>
+                <li>21</li><li>22</li><li>23</li><li>24</li><li>25</li>
+                <li>31</li><li>32</li><li>33</li><li>34</li><li>35</li>
+                <li>41</li><li>42</li><li>43</li><li>44</li><li>45</li>
+                <li>51</li><li>52</li><li id="target">53</li><li>54</li><li>55</li>
+            </ul>
+        </div>
+
+    <script type="text/javascript">
+
+        var topRefleshEl = document.querySelector("#topReflesh");
+        var wrapperEl = document.getElementById("wrapper");
+
+
+        setTimeout(function(){
+            myScroll = new IScroll(wrapperEl,{
+                probeType : 2
+            });
+
+            var isReflesh = false;
+
+            myScroll.on("scroll", function(){
+                if(this.directionY == -1){
+                    if(this.y > topRefleshEl.offsetHeight){
+                        topRefleshEl.innerHTML = "↑放手即刷新";
+                        isReflesh = true;
+                    }
+                }
+
+            });
+
+            myScroll.on("scrollEnd", function(){
+
+                if(isReflesh){
+                    myScroll.options.startY = topRefleshEl.offsetHeight;
+                    topRefleshEl.innerHTML = "刷新ing";
+                    myScroll.scrollTo(0, topRefleshEl.offsetHeight);
+                }
+
+            });
+
+        }, 200);
+
+    </script>
+    </body>
+</html>

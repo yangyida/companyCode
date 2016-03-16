@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .clear:after{
+                display: block;
+                content: ".";
+                height: 0;
+                visibility: hidden;
+                clear: both;
+            }
+            .box{
+                height: auto;
+                overflow: hidden;
+            }
+            .box>:nth-child(1){
+                float:left;
+                width: 300px;
+                background-color: #00af5c;
+                padding-bottom: 99999px;
+                margin-bottom: -99999px;
+            }
+            .box>:nth-child(2){
+                background-color: #0050c0;
+                margin-left: 300px;
+                height: auto;
+            }
+            .box>*{
+                min-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box clear">
+            <div>
+                asdfasdasd
+            </div>
+            <div>
+                asfasdfsdf<br>
+                asfasdfsdf<br>
+                asfasdfsdf<br>
+                asfasdfsdf<br>
+            </div>
+        </div>
+    </body>
+</html>
